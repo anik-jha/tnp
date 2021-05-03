@@ -29,7 +29,7 @@ import matplotlib.patches as patches
 from matplotlib.ticker import NullLocator
 
 IMAGE_SIZE = 416
-BS = 32
+BS = 8
 
 def create_frames(inputDir, inputFile, framesDir):
 
@@ -86,7 +86,7 @@ def detect(inputDir, inputFile, framesDir, outputTxt, outputFolder, conf, nms, c
     imgs = []  # Stores image paths
     img_detections = []  # Stores detections for each image index
 
-    print("\nPerforming object detection:")
+    print("\nPerforming object detection in ...:")
     if thread:
         total = len(dataloader)
         thread.signalCanvas("\nPerforming object detection:")
